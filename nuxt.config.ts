@@ -2,7 +2,8 @@
 // @ts-ignore
 // @ts-ignore
 export default defineNuxtConfig({
-    ssr: true,
+    target: 'static',
+    ssr: false,
     modules: ['nuxt-graphql-client'],
 
     runtimeConfig: {
