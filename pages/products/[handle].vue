@@ -30,6 +30,7 @@ const redirectToPayment = async () => {
         :description="product.productByHandle.description"
         :price="`${parseFloat(product.productByHandle.priceRange.maxVariantPrice.amount).toFixed(2)} ${product.productByHandle.priceRange.maxVariantPrice.currencyCode}`"
         :images="product.productByHandle.images"
+        :available="product.productByHandle.availableForSale"
         :loading="loading"
         @button-clicked="redirectToPayment"
     />

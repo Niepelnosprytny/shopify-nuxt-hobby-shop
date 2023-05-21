@@ -16,6 +16,10 @@ const props = defineProps({
     type: Object,
     required: true,
   },
+  available: {
+    type: Boolean,
+    required: true
+  },
   loading: {
     type: Boolean,
     required: true
@@ -46,9 +50,10 @@ function changeImageIndex(index: number) {
     </div>
     <div class="detailsAndPrice">
       <h1>{{ title }}</h1>
-      <button @click="emit('button-clicked')">
+      <button v-if="available" @click="emit('button-clicked')">
         {{ loading ? 'Redirecting' : `Buy for ${price}` }}
       </button>
+      <button v-else class="sadgeButton" disabled>Out of stock</button>
       <p>{{ description }}</p>
     </div>
   </section>
@@ -132,5 +137,11 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+.sadgeButton,
+.sadgeButton:hover {
+  background-color: #FF7777;
+  cursor: not-allowed;
 }
 </style>

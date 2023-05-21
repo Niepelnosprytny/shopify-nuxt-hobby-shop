@@ -1,6 +1,7 @@
 query Product ($handle: String!) {
     productByHandle(handle: $handle) {
         id
+        availableForSale
         title
         productType
         priceRange {
