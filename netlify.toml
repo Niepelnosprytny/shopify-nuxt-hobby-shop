@@ -3,10 +3,9 @@
 [build]
   command = "yarn generate"
   publish = "dist"
-  functions = 'functions'  # directs netlify to where your functions directory is located
+  functions = 'functions'
 
 [[headers]]
-  # Define which paths this specific [[headers]] block will cover.
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
