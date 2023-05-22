@@ -13,6 +13,8 @@
     "nuxt": "^3.5.0"
   },
   "dependencies": {
+    "global": "^4.4.0",
+    "netlify-cli": "^15.1.1",
     "nuxt-graphql-client": "^0.2.27"
   }
 }
