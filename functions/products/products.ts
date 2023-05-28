@@ -1,8 +1,7 @@
 import { Handler } from '@netlify/functions';
-
 const fetch = require('node-fetch');
 
-export const handler: Handler = async (event) => {
+export const handler: Handler = async (event, context) => {
   const query = `
     query Products ($first: Int!, $query: String) {
       products(first: $first, query: $query) {
