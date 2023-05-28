@@ -6,6 +6,7 @@ node_modules
 .output
 .env
 .DS_Store
+dist
 
 # Local Netlify folder
 .netlify

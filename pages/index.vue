@@ -1,5 +1,14 @@
 <script setup lang="ts">
-let {data} = await useAsyncData('products', () => GqlProducts({first: 20}));
+
+const {data} = await fetch('.netlify/functions/products', {
+  headers: {
+    'variables': JSON.stringify({
+      first: 20
+    })
+  }
+}).then(
+    (res) => res.json()
+);
 </script>
 
 <template>

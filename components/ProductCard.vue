@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import {min} from "rxjs";
-
 const props = defineProps({
   title: {
     type: String,
